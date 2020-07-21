@@ -2,14 +2,14 @@
   <section class="c-works">
       <div class="c-works__container">
       <div class="c-works__title">
-          <h1>works</h1>
+          <p>works</p>
           <p class="c-works__subtitle">空間デザイン施工事例</p>
       </div>
         <div class="c-works__box">
             <div class="c-works__box01">
             </div>
         <div class="c-works__menue">
-        <a class="c-works__hana" href="~">花を楽しむ</a>
+        <a class="c-works__hana" href="~">花を楽しむ</a><br>
         <a class="c-works__hana" href="~">緑を楽しむ</a>
         </div>
         </div>
@@ -23,6 +23,7 @@
 </script>
 
 <style lang="scss" scoped>
+@import "~assets/scss/mixins.scss";
  .c-works {
      width: 100%;
 
@@ -36,6 +37,10 @@
 
     &__menue {
       display: inline-flex;
+
+      @include mobile {
+        display: block;
+      }
   }
 
 
@@ -50,6 +55,17 @@
   font-size: 100px;
   color: #fff;
   line-height: 160px;
+
+  @include mobile {
+    margin: 0;
+    height: 300px;
+    width: 300px;
+    font-size: 30px;
+    line-height: 300px;
+    margin-bottom: 100px;
+      line-height: 300px;
+      
+  }
   }
  }
  </style>

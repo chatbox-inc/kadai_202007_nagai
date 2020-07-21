@@ -1,17 +1,22 @@
 <template>
   <section class="c-hero">
       <div class="c-hero__container">
-        <div class="c-hero__box">
+        <div class="box">
             <div class="c-hero__site-heading">
-              <h1>CAFE</h1>
-              <span class="subheading">カフェ</span>
+              <img class="c-hero__cafe"
+              src="@/assets/image/cafe.jpg"
+              alt="カフェ"/>
+              <p class="c-hero__btn">CAFE</p>
+              <p class="c-hero__subbtn">カフェ</p>
             </div>
-
             <div class="c-hero__site-heading">
-              <h1>PLA</h1>
-              <span class="subheading">インテリアグリーン</span>
+              <img class="c-hero__cafe"
+              src="@/assets/image/cafe_.jpg"
+              alt="カフェ"/>
+              <p class="c-hero__btn">PLA</p>
+              <p class="c-hero__subbtn">インテリアグリーン</p>
             </div>
-          </div>
+        </div>
       </div>
   </section>
 </template>
@@ -22,35 +27,41 @@
 </script>
 
 <style lang="scss" scoped>
+@import "~assets/scss/mixins.scss";
+
  .c-hero {
+
    &__box {
-     display: inline-flex;
-     margin:5% 20%;
+     display: flex;
      
-     @mixin mobile {
-       display: none;
-       margin: none;
+     @include mobile {
+       display: block;
    }
    }
 
-    &__site-heading {
-    margin: 0 30px;
-    width: 40%;
-    text-align:center;
-    margin:0 auto;
-    height: 560px;
+   &__site-heading {
+     
+     width: 50%;
+    height: 275px;
     background: rgb(109, 109, 109);
-    font-size: 100px;
+    margin: 10px auto;
+    text-align: center;
     color: #fff;
-    line-height: 100px;
-    
-    @mixin mobile {
-       width: 300px;
-       height: 200px;
-       margin: none;
-       font-size: 30px;
+
+  @include mobile {
+
+    width: 100%;
+    height: 275px;
+    background: rgb(109, 109, 109);
+    margin: 10px auto;
+    text-align: center;
+    color: #fff;
    }
   }
+
+  &____btn {
+    font-size: 60px;
   }
+ }
 
 </style>

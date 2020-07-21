@@ -1,3 +1,5 @@
+const Sass = require('sass')
+const Fiber = require('fibers')
 
 export default {
   /*
@@ -57,5 +59,19 @@ export default {
   ** See https://nuxtjs.org/api/configuration-build/
   */
   build: {
+    loaders: {
+      scss: {
+        implementation: Sass,
+        sassOptions: {
+          fiber: Fiber
+        }
+      }
+    },
+    /*
+     ** You can extend webpack config here
+     */
+    extend (config, ctx) {
+    }
   }
-}
+  }
+
