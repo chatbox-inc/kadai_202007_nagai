@@ -1,15 +1,15 @@
 <template>
   <section class="c-hero">
       <div class="c-hero__container">
-        <div class="box">
-            <div class="c-hero__site-heading">
+        <div class="c-hero__box">
+            <div class="c-hero__top">
               <img class="c-hero__cafe"
               src="@/assets/image/cafe.jpg"
               alt="カフェ"/>
               <p class="c-hero__btn">CAFE</p>
               <p class="c-hero__subbtn">カフェ</p>
             </div>
-            <div class="c-hero__site-heading">
+            <div class="c-hero__top">
               <img class="c-hero__cafe"
               src="@/assets/image/cafe_.jpg"
               alt="カフェ"/>
@@ -30,19 +30,22 @@
 @import "~assets/scss/mixins.scss";
 
  .c-hero {
+   &__container {
+     margin: 0 35px;
+     padding-bottom: 160px;
+   }
 
    &__box {
      display: flex;
+     align-items: center;
      
      @include mobile {
        display: block;
-   }
+    }
    }
 
-   &__site-heading {
-     
+   &__top {
      width: 50%;
-    height: 275px;
     background: rgb(109, 109, 109);
     margin: 10px auto;
     text-align: center;
@@ -51,7 +54,6 @@
   @include mobile {
 
     width: 100%;
-    height: 275px;
     background: rgb(109, 109, 109);
     margin: 10px auto;
     text-align: center;
